@@ -1,4 +1,4 @@
-const CACHE_NAME = 'philsca-schedule-v2'; // Increment this version number for updates
+const CACHE_NAME = 'philsca-schedule-v3'; // Increment this version number for updates
 const urlsToCache = [
   '/',
   'index.html',
