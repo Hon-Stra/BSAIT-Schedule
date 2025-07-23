@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Student Schedule</title>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#4a90e2">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .day {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .day h2 {
+      font-size: 1.2rem;
+      border-left: 5px solid #007ACC;
+      padding-left: 10px;
+      color: #007ACC;
+      margin-bottom: 10px;
+    }
+
+    .class {
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .class span {
+      display: block;
+    }
+
+    .subject {
+      font-weight: 600;
+      color: #004477;
+    }
+
+    .time, .room {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      font-size: 0.75em;
+      border-radius: 4px;
+      background: #d9f2e6;
+      color: #2e8b57;
+      margin-top: 5px;
+    }
+
+    /* ---------- Mobile View Adjustment ---------- */
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .class {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .tag {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Freshmen Schedule<br>BSIT-AIT 1-2<br>1st Semester<br>A.Y. 2025-2026</h1>
+  <div class="container">
+
+    <div class="day">
+      <h2>Monday</h2>
+      <div class="class">
+        <div>
+          <span class="subject">PATHFIT-1</span>
+          <span class="time">09:30 AM – 10:30 AM</span>
+          <span class="room">Covered Court</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 111</span>
+          <span class="time">11:00 AM – 12:00 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+       <div class="class">
+        <div>
+          <span class="subject">IT 111</span>
+          <span class="time">11:00 AM – 12:00 PM</span>
+          <span class="room">COMP LAB 2</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <h2>Tuesday</h2>
+      <div class="class">
+        <div>
+          <span class="subject">IT 112</span>
+          <span class="time">12:30 PM – 01:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 113</span>
+          <span class="time">01:30 PM – 02:30 PM</span>
+          <span class="room">COMP LAB 1</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">GEC 2</span>
+          <span class="time">02:30 PM – 03:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 113</span>
+          <span class="time">03:30 PM – 04:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">AIT 111</span>
+          <span class="time">04:30 PM – 05:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <h2>Wednesday</h2>
+      <div class="class">
+        <div>
+          <span class="subject">IT 111</span>
+          <span class="time">11:00 AM – 12:00 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 112</span>
+          <span class="time">12:30 PM – 01:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 113</span>
+          <span class="time">01:30 PM – 02:30 PM</span>
+          <span class="room">COMP LAB 1</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">GEC 2</span>
+          <span class="time">02:30 PM – 03:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 113</span>
+          <span class="time">03:30 PM – 04:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">AIT 111</span>
+          <span class="time">04:30 PM – 05:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <h2>Thursday</h2>
+      <div class="class">
+        <div>
+          <span class="subject">IT 111</span>
+          <span class="time">11:00 AM – 12:00 PM</span>
+          <span class="room">COMP LAB 2</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">GEC 1</span>
+          <span class="time">12:30 PM – 01:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">GEC 1</span>
+          <span class="time">01:30 PM – 02:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">IT 112</span>
+          <span class="time">02:30 PM – 03:30 PM</span>
+          <span class="room">COMP LAB 4</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">GEC 5</span>
+          <span class="time">03:30 PM – 04:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+      <div class="class">
+        <div>
+          <span class="subject">GEC 5</span>
+          <span class="time">04:30 PM – 05:30 PM</span>
+          <span class="room">110 B</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <h2>Friday</h2>
+      </div>
+
+    <div class="day">
+      <h2>Saturday</h2>
+      </div>
+
+    <div class="day">
+      <h2>Sunday</h2>
+      <div class="class">
+        <div>
+          <span class="subject">NSTP 1</span>
+          <span class="time">09:30 AM – 10:30 AM</span>
+          <span class="room">Covered Court</span>
+        </div>
+        <span class="tag">BSIT-AIT 1-2</span>
+      </div>
+    </div>
+
+  </div>
+   <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('Service Worker registered!', reg))
+      .catch(err => console.error('Service Worker failed:', err));
+  }
+  </script>
+</body>
+</html>
